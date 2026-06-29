@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="wheelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f0f6ff" />
+      <stop offset="100%" stop-color="#e0f2fe" />
+    </linearGradient>
+
+    <!-- Deep Blue Glow -->
+    <linearGradient id="solidBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a6fdb" />
+      <stop offset="100%" stop-color="#0b1e36" />
+    </linearGradient>
+
+    <!-- Shadow -->
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" fill="url(#wheelBg)" rx="20" stroke="#cbd5e1" stroke-width="1" />
+
+  <!-- Schematic Grid Mesh -->
+  <circle cx="200" cy="150" r="120" fill="none" stroke="#2a6fdb" stroke-width="1" stroke-dasharray="2 4" opacity="0.2" />
+
+  <!-- MAIN GRAPHIC: Stylized Wheelchair Accessibility Shield Badge -->
+  <g transform="translate(0, 0)" filter="url(#badgeShadow)">
+    <!-- Central Shield badge -->
+    <path d="M 200 70 L 260 90 V 170 C 260 210, 200 240, 200 240 C 200 240, 140 210, 140 170 V 90 Z" fill="url(#solidBlue)" stroke="#ffffff" stroke-width="3" />
+
+    <!-- Wheelchair Access Symbol Inside the Shield -->
+    <g transform="translate(181, 105) scale(1.6)" opacity="1">
+      <!-- Head -->
+      <circle cx="12" cy="7" r="2.5" fill="#ffffff" />
+      <!-- Torso and Leg Support -->
+      <path d="M 12 9.5 V 14.5 H 15.5 M 12 11.5 H 8.5" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" fill="none" />
+      <!-- Wheel -->
+      <path d="M 7.5 13 A 3.5 3.5 0 1 1 11.5 16.5" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" fill="none" />
+    </g>
+  </g>
+
+  <!-- FLOATING BADGES -->
+  <!-- Badge: ADA Compliant -->
+  <g transform="translate(45, 135)" filter="url(#badgeShadow)">
+    <rect width="90" height="30" fill="#ffffff" rx="8" />
+    <circle cx="15" cy="15" r="7" fill="#d1fae5" />
+    <!-- Checkmark Mini -->
+    <path d="M 12 15 L 14 17 L 18 13" stroke="#059669" stroke-width="1.8" stroke-linecap="round" fill="none" />
+    <text x="28" y="18" font-family="sans-serif" font-size="8" font-weight="extrabold" fill="#0f172a">ADA Compliant</text>
+  </g>
+
+  <!-- Badge: Safety Harness -->
+  <g transform="translate(265, 135)" filter="url(#badgeShadow)">
+    <rect width="90" height="30" fill="#ffffff" rx="8" />
+    <circle cx="15" cy="15" r="7" fill="#fee2e2" />
+    <!-- Shield/Safety mini -->
+    <path d="M 15 11 L 18 12.2 V 15.5 C 18 17.5, 15 19, 15 19 C 15 19, 12 17.5, 12 15.5 V 12.2 Z" fill="#ef4444" />
+    <text x="28" y="18" font-family="sans-serif" font-size="8" font-weight="extrabold" fill="#0f172a">Safety Straps</text>
+  </g>
+
+  <!-- Title Indicator -->
+  <rect x="130" y="240" width="140" height="24" fill="#0b1e36" rx="6" stroke="#cfa846" stroke-width="1" />
+  <text x="200" y="254" font-family="sans-serif" font-size="8" font-weight="extrabold" fill="#cfa846" text-anchor="middle" letter-spacing="1">MOBILITY SUPPORTED</text>
+</svg>

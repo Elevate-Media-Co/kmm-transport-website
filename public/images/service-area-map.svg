@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="mapBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fafbfd" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+
+    <!-- Radar Glow Animation Mock -->
+    <radialGradient id="phoenixGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a6fdb" stop-opacity="0.3" />
+      <stop offset="70%" stop-color="#2a6fdb" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#2a6fdb" stop-opacity="0" />
+    </radialGradient>
+    
+    <!-- Location Pin Glow -->
+    <radialGradient id="pinGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#cfa846" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#cfa846" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadow -->
+    <filter id="mapShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Map Background Card -->
+  <rect width="100%" height="100%" fill="url(#mapBg)" rx="20" stroke="#cbd5e1" stroke-width="1" />
+
+  <!-- Styled Grid Mesh overlay representing a schematic map -->
+  <path d="M 0 50 H 500 M 0 100 H 500 M 0 150 H 500 M 0 200 H 500 M 0 250 H 500 M 0 300 H 500" fill="none" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2 3" />
+  <path d="M 50 0 V 350 M 100 0 V 350 M 150 0 V 350 M 200 0 V 350 M 250 0 V 350 M 300 0 V 350 M 350 0 V 350 M 400 0 V 350 M 450 0 V 350" fill="none" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2 3" />
+
+  <!-- Soft Highway / Main Route Roads -->
+  <path d="M 50 175 H 450" fill="none" stroke="#e2e8f0" stroke-width="5" opacity="0.8" /> <!-- I-10 Mock -->
+  <path d="M 250 50 V 300" fill="none" stroke="#e2e8f0" stroke-width="5" opacity="0.8" />  <!-- I-17 Mock -->
+  <path d="M 120 70 L 380 280" fill="none" stroke="#e2e8f0" stroke-width="3" opacity="0.5" />
+  <path d="M 380 70 L 120 280" fill="none" stroke="#e2e8f0" stroke-width="3" opacity="0.5" />
+
+  <!-- Phoenix Center Radar Glow -->
+  <circle cx="250" cy="175" r="50" fill="url(#phoenixGlow)" />
+  <circle cx="250" cy="175" r="85" fill="none" stroke="#2a6fdb" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.4" />
+
+  <!-- ROUTE STRINGS TO CITIES -->
+  <!-- Phoenix to Glendale -->
+  <path d="M 250 175 L 180 130" stroke="#2a6fdb" stroke-width="2" stroke-dasharray="4 3" opacity="0.7" />
+  <!-- Phoenix to Peoria -->
+  <path d="M 250 175 L 130 90" stroke="#2a6fdb" stroke-width="2" stroke-dasharray="4 3" opacity="0.7" />
+  <!-- Phoenix to Scottsdale -->
+  <path d="M 250 175 L 340 110" stroke="#2a6fdb" stroke-width="2" stroke-dasharray="4 3" opacity="0.7" />
+  <!-- Phoenix to Tempe -->
+  <path d="M 250 175 L 310 220" stroke="#2a6fdb" stroke-width="2" stroke-dasharray="4 3" opacity="0.7" />
+  <!-- Phoenix to Mesa -->
+  <path d="M 250 175 L 390 200" stroke="#2a6fdb" stroke-width="2" stroke-dasharray="4 3" opacity="0.7" />
+  <!-- Phoenix to Chandler -->
+  <path d="M 250 175 L 350 280" stroke="#2a6fdb" stroke-width="2" stroke-dasharray="4 3" opacity="0.7" />
+  <!-- Phoenix to Avondale -->
+  <path d="M 250 175 L 120 200" stroke="#2a6fdb" stroke-width="2" stroke-dasharray="4 3" opacity="0.7" />
+  <!-- Phoenix to Goodyear -->
+  <path d="M 250 175 L 80 230" stroke="#2a6fdb" stroke-width="2" stroke-dasharray="4 3" opacity="0.7" />
+  <!-- Phoenix to Surprise -->
+  <path d="M 250 175 L 90 60" stroke="#2a6fdb" stroke-width="2" stroke-dasharray="4 3" opacity="0.7" />
+
+  <!-- CITY PIN GLOWS -->
+  <circle cx="250" cy="175" r="14" fill="url(#pinGlow)" />
+  <circle cx="180" cy="130" r="8" fill="url(#pinGlow)" />
+  <circle cx="340" cy="110" r="8" fill="url(#pinGlow)" />
+  <circle cx="310" cy="220" r="8" fill="url(#pinGlow)" />
+  <circle cx="390" cy="200" r="8" fill="url(#pinGlow)" />
+
+  <!-- PHOENIX CENTER STAR PIN (The Headquarters) -->
+  <g transform="translate(250, 175)" filter="url(#mapShadow)">
+    <circle cx="0" cy="0" r="10" fill="#0b1e36" />
+    <circle cx="0" cy="0" r="5" fill="#cfa846" />
+    <!-- Pin shape indicator -->
+    <path d="M -15 -25 H 15 V -8 L 0 5 L -15 -8 Z" fill="#0b1e36" />
+    <text x="0" y="-13" font-family="sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">PHOENIX</text>
+  </g>
+
+  <!-- SUBURB PINS & LABELS -->
+  <!-- Glendale -->
+  <g transform="translate(180, 130)">
+    <circle cx="0" cy="0" r="5" fill="#2a6fdb" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="-35" y="-18" width="54" height="12" fill="#ffffff" rx="3" stroke="#e2e8f0" stroke-width="0.5" filter="url(#mapShadow)" />
+    <text x="-8" y="-9" font-family="sans-serif" font-size="6.5" font-weight="bold" fill="#0b1e36" text-anchor="middle">Glendale</text>
+  </g>
+
+  <!-- Peoria -->
+  <g transform="translate(130, 90)">
+    <circle cx="0" cy="0" r="4" fill="#2a6fdb" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="-25" y="-18" width="42" height="12" fill="#ffffff" rx="3" stroke="#e2e8f0" stroke-width="0.5" filter="url(#mapShadow)" />
+    <text x="-4" y="-9" font-family="sans-serif" font-size="6.5" font-weight="bold" fill="#0b1e36" text-anchor="middle">Peoria</text>
+  </g>
+
+  <!-- Surprise -->
+  <g transform="translate(90, 60)">
+    <circle cx="0" cy="0" r="4" fill="#2a6fdb" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="-28" y="-18" width="46" height="12" fill="#ffffff" rx="3" stroke="#e2e8f0" stroke-width="0.5" filter="url(#mapShadow)" />
+    <text x="-5" y="-9" font-family="sans-serif" font-size="6.5" font-weight="bold" fill="#0b1e36" text-anchor="middle">Surprise</text>
+  </g>
+
+  <!-- Scottsdale -->
+  <g transform="translate(340, 110)">
+    <circle cx="0" cy="0" r="5" fill="#2a6fdb" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="-10" y="-18" width="58" height="12" fill="#ffffff" rx="3" stroke="#e2e8f0" stroke-width="0.5" filter="url(#mapShadow)" />
+    <text x="19" y="-9" font-family="sans-serif" font-size="6.5" font-weight="bold" fill="#0b1e36" text-anchor="middle">Scottsdale</text>
+  </g>
+
+  <!-- Tempe -->
+  <g transform="translate(310, 220)">
+    <circle cx="0" cy="0" r="5" fill="#2a6fdb" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="-22" y="-18" width="40" height="12" fill="#ffffff" rx="3" stroke="#e2e8f0" stroke-width="0.5" filter="url(#mapShadow)" />
+    <text x="-2" y="-9" font-family="sans-serif" font-size="6.5" font-weight="bold" fill="#0b1e36" text-anchor="middle">Tempe</text>
+  </g>
+
+  <!-- Mesa -->
+  <g transform="translate(390, 200)">
+    <circle cx="0" cy="0" r="5" fill="#2a6fdb" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="-10" y="-18" width="44" height="12" fill="#ffffff" rx="3" stroke="#e2e8f0" stroke-width="0.5" filter="url(#mapShadow)" />
+    <text x="12" y="-9" font-family="sans-serif" font-size="6.5" font-weight="bold" fill="#0b1e36" text-anchor="middle">Mesa</text>
+  </g>
+
+  <!-- Chandler -->
+  <g transform="translate(350, 280)">
+    <circle cx="0" cy="0" r="4" fill="#2a6fdb" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="-25" y="-18" width="48" height="12" fill="#ffffff" rx="3" stroke="#e2e8f0" stroke-width="0.5" filter="url(#mapShadow)" />
+    <text x="-1" y="-9" font-family="sans-serif" font-size="6.5" font-weight="bold" fill="#0b1e36" text-anchor="middle">Chandler</text>
+  </g>
+
+  <!-- Avondale -->
+  <g transform="translate(120, 200)">
+    <circle cx="0" cy="0" r="4" fill="#2a6fdb" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="-25" y="-18" width="48" height="12" fill="#ffffff" rx="3" stroke="#e2e8f0" stroke-width="0.5" filter="url(#mapShadow)" />
+    <text x="-1" y="-9" font-family="sans-serif" font-size="6.5" font-weight="bold" fill="#0b1e36" text-anchor="middle">Avondale</text>
+  </g>
+
+  <!-- Goodyear -->
+  <g transform="translate(80, 230)">
+    <circle cx="0" cy="0" r="4" fill="#2a6fdb" stroke="#ffffff" stroke-width="1.5" />
+    <rect x="-25" y="-18" width="48" height="12" fill="#ffffff" rx="3" stroke="#e2e8f0" stroke-width="0.5" filter="url(#mapShadow)" />
+    <text x="-1" y="-9" font-family="sans-serif" font-size="6.5" font-weight="bold" fill="#0b1e36" text-anchor="middle">Goodyear</text>
+  </g>
+
+  <!-- Compass Rose Visual Icon (Soft Detail) -->
+  <g transform="translate(440, 60)" opacity="0.3">
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#0b1e36" stroke-width="1" />
+    <path d="M 0 -22 L 4 -4 L 22 0 L 4 4 L 0 22 L -4 4 L -22 0 L -4 -4 Z" fill="#0b1e36" />
+    <circle cx="0" cy="0" r="3" fill="#ffffff" />
+    <text x="0" y="-25" font-family="sans-serif" font-size="7" font-weight="bold" fill="#0b1e36" text-anchor="middle">N</text>
+  </g>
+</svg>

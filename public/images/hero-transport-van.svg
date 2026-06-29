@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#f0f6ff" />
+      <stop offset="100%" stop-color="#dbeafe" />
+    </radialGradient>
+    
+    <!-- Van Body Gradient -->
+    <linearGradient id="vanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="70%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <!-- Glass Gradient -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Gold Accent Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cfa846" />
+      <stop offset="100%" stop-color="#e8c368" />
+    </linearGradient>
+
+    <!-- Shadow Filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.12" />
+    </filter>
+
+    <!-- Floor Shadow -->
+    <radialGradient id="floorShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0f172a" stop-opacity="0.25" />
+      <stop offset="80%" stop-color="#0f172a" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" rx="24" />
+
+  <!-- Phoenix Desert / Mountain Accents (Soft Backdrop) -->
+  <g opacity="0.35">
+    <path d="M 0 320 L 150 200 L 280 280 L 450 180 L 600 300 L 600 400 L 0 400 Z" fill="#93c5fd" />
+    <path d="M 120 300 L 250 160 L 380 250 L 520 150 L 600 210 L 600 400 L 120 400 Z" fill="#bfdbfe" />
+    <!-- Stylized Saguaro Cactus -->
+    <path d="M 50 240 L 50 180 A 8 8 0 0 1 58 172 A 8 8 0 0 1 66 180 L 66 210 M 58 172 L 58 260 M 66 200 H 78 V 185 A 6 6 0 0 1 84 179 A 6 6 0 0 1 90 185 L 90 205 M 38 215 H 50 V 195 A 6 6 0 0 0 44 189 A 6 6 0 0 0 38 195 L 38 225" 
+          stroke="#3b82f6" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.4"/>
+  </g>
+
+  <!-- Route Line Overlay -->
+  <g opacity="0.6">
+    <path d="M 50 340 Q 200 280 320 340 T 550 300" fill="none" stroke="#2a6fdb" stroke-width="4" stroke-dasharray="8 6" />
+    <circle cx="50" cy="340" r="8" fill="#cfa846" />
+    <circle cx="550" cy="300" r="8" fill="#2a6fdb" />
+    <path d="M 550 280 L 545 290 H 555 Z" fill="#2a6fdb" />
+  </g>
+
+  <!-- Floor Shadow for the Van -->
+  <ellipse cx="300" cy="310" rx="220" ry="18" fill="url(#floorShadow)" />
+
+  <!-- THE MEDICAL TRANSPORT VAN (NEMT) -->
+  <g filter="url(#shadow)">
+    <!-- Wheels -->
+    <!-- Rear Wheel -->
+    <g transform="translate(195, 290)">
+      <circle cx="0" cy="0" r="30" fill="#1e293b" />
+      <circle cx="0" cy="0" r="16" fill="#64748b" />
+      <circle cx="0" cy="0" r="8" fill="#e2e8f0" />
+      <!-- Hubcap details -->
+      <circle cx="0" cy="-12" r="2" fill="#94a3b8" />
+      <circle cx="12" cy="0" r="2" fill="#94a3b8" />
+      <circle cx="0" cy="12" r="2" fill="#94a3b8" />
+      <circle cx="-12" cy="0" r="2" fill="#94a3b8" />
+    </g>
+    <!-- Front Wheel -->
+    <g transform="translate(415, 290)">
+      <circle cx="0" cy="0" r="30" fill="#1e293b" />
+      <circle cx="0" cy="0" r="16" fill="#64748b" />
+      <circle cx="0" cy="0" r="8" fill="#e2e8f0" />
+      <circle cx="0" cy="-12" r="2" fill="#94a3b8" />
+      <circle cx="12" cy="0" r="2" fill="#94a3b8" />
+      <circle cx="0" cy="12" r="2" fill="#94a3b8" />
+      <circle cx="-12" cy="0" r="2" fill="#94a3b8" />
+    </g>
+
+    <!-- Mudguards / Wheel Arches -->
+    <path d="M 160 290 A 35 35 0 0 1 230 290" fill="none" stroke="#cbd5e1" stroke-width="6" />
+    <path d="M 380 290 A 35 35 0 0 1 450 290" fill="none" stroke="#cbd5e1" stroke-width="6" />
+
+    <!-- Main Van Body -->
+    <path d="M 120 280 
+             L 120 150 
+             A 20 20 0 0 1 140 130 
+             L 420 130 
+             Q 450 130 470 170 
+             L 490 220 
+             Q 500 240 500 260 
+             L 500 280 
+             A 10 10 0 0 1 490 290 
+             L 455 290 
+             A 40 40 0 0 0 375 290 
+             L 235 290
+             A 40 40 0 0 0 155 290 
+             L 130 290
+             A 10 10 0 0 1 120 280 Z" 
+          fill="url(#vanGrad)" stroke="#94a3b8" stroke-width="2" />
+
+    <!-- Front Bumper -->
+    <path d="M 490 270 L 510 270 A 5 5 0 0 1 515 275 A 5 5 0 0 1 510 280 L 490 280 Z" fill="#475569" />
+    <!-- Rear Bumper -->
+    <path d="M 120 270 L 110 270 A 5 5 0 0 0 105 275 A 5 5 0 0 0 110 280 L 120 280 Z" fill="#475569" />
+
+    <!-- Windows / Glass Section -->
+    <!-- Rear Cabin Window -->
+    <path d="M 135 145 H 220 V 200 H 135 Z" fill="url(#glassGrad)" rx="6" />
+    <!-- Middle Passenger Window -->
+    <path d="M 235 145 H 330 V 200 H 235 Z" fill="url(#glassGrad)" rx="6" />
+    <!-- Front Door Window -->
+    <path d="M 345 145 H 425 L 445 185 V 200 H 345 Z" fill="url(#glassGrad)" rx="6" />
+
+    <!-- Side Door Lines / Handle -->
+    <path d="M 230 140 V 285" stroke="#94a3b8" stroke-width="1.5" />
+    <path d="M 335 140 V 285" stroke="#94a3b8" stroke-width="1.5" />
+    <rect x="320" y="200" width="10" height="4" fill="#334155" rx="1" />
+    <rect x="345" y="200" width="10" height="4" fill="#334155" rx="1" />
+
+    <!-- Front Headlight (Soft medical golden-yellow) -->
+    <path d="M 495 220 Q 503 230 495 240 Z" fill="#fef08a" stroke="#facc15" stroke-width="1" />
+    <path d="M 495 220 L 510 215 A 15 15 0 0 1 510 245 Z" fill="#fef08a" opacity="0.3" />
+
+    <!-- Rear Taillight -->
+    <rect x="120" y="210" width="4" height="25" fill="#ef4444" rx="1" />
+
+    <!-- Decal / Stripe Design (Premium branding) -->
+    <!-- Medical Blue Curved Stripe -->
+    <path d="M 121 245 C 200 245 280 230 350 255 L 485 255 L 482 263 L 350 263 C 280 238 200 253 121 253 Z" fill="#2a6fdb" />
+    <!-- Gold Accent Curved Stripe -->
+    <path d="M 121 256 C 180 256 250 245 320 266 L 478 266 L 475 271 L 320 271 C 250 250 180 261 121 261 Z" fill="url(#goldGrad)" />
+
+    <!-- TEXT BRANDING ON THE VAN -->
+    <text x="282" y="225" font-family="sans-serif" font-size="11" font-weight="900" fill="#0b1e36" text-anchor="middle" letter-spacing="1">KMM TRANSPORT</text>
+    <text x="282" y="235" font-family="sans-serif" font-size="6.5" font-weight="bold" fill="#2a6fdb" text-anchor="middle" letter-spacing="0.5">NON-EMERGENCY MEDICAL</text>
+
+    <!-- Wheelchair Access Symbol (Decal) -->
+    <g transform="translate(150, 215) scale(0.65)" opacity="0.9">
+      <circle cx="12" cy="12" r="11" fill="#2a6fdb" />
+      <!-- Wheelchair Seat/Frame -->
+      <circle cx="12" cy="7" r="2.5" fill="#ffffff" />
+      <path d="M 12 9.5 V 14.5 H 15.5 M 12 11.5 H 8.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none" />
+      <!-- Wheel outline -->
+      <path d="M 7.5 13 A 3.5 3.5 0 1 1 11.5 16.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" fill="none" />
+    </g>
+  </g>
+
+  <!-- Floating Cards (Trust Badges inside Hero) -->
+  <!-- Floating Card 1: Wheelchair Support -->
+  <g transform="translate(30, 45)" filter="url(#shadow)">
+    <rect width="130" height="42" fill="#ffffff" rx="10" />
+    <rect width="4" height="42" fill="#2a6fdb" rx="2" />
+    <!-- Icon -->
+    <g transform="translate(12, 11) scale(0.85)">
+      <circle cx="10" cy="10" r="9" fill="#e0f2fe" />
+      <path d="M10 6a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm0 4.5v3.5h2.5M10 11.5H7.5" stroke="#0284c7" stroke-width="1.8" stroke-linecap="round" fill="none" />
+      <path d="M6.5 12 A 2.5 2.5 0 1 0 9.5 14.5" stroke="#0284c7" stroke-width="1.8" stroke-linecap="round" fill="none" />
+    </g>
+    <text x="40" y="20" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#0f172a">Wheelchair</text>
+    <text x="40" y="31" font-family="sans-serif" font-size="8" font-weight="medium" fill="#64748b">Accessible support</text>
+  </g>
+
+  <!-- Floating Card 2: Senior Friendly -->
+  <g transform="translate(430, 60)" filter="url(#shadow)">
+    <rect width="135" height="42" fill="#ffffff" rx="10" />
+    <rect width="4" height="42" fill="#cfa846" rx="2" />
+    <!-- Icon (Heart/Care) -->
+    <g transform="translate(12, 11) scale(0.85)">
+      <circle cx="10" cy="10" r="9" fill="#fef3c7" />
+      <path d="M10 6.5 C10 6.5 8.5 5 7.2 6.2 C6 7.4 6 9.4 7.2 10.6 L10 13.5 L12.8 10.6 C14 9.4 14 7.4 12.8 6.2 C11.5 5 10 6.5 10 6.5 Z" fill="#d97706" />
+    </g>
+    <text x="40" y="20" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#0f172a">Senior Friendly</text>
+    <text x="40" y="31" font-family="sans-serif" font-size="8" font-weight="medium" fill="#64748b">Caring assistants</text>
+  </g>
+
+  <!-- Floating Card 3: On-Time Pickup -->
+  <g transform="translate(380, 315)" filter="url(#shadow)">
+    <rect width="130" height="42" fill="#ffffff" rx="10" />
+    <rect width="4" height="42" fill="#10b981" rx="2" />
+    <!-- Icon (Clock) -->
+    <g transform="translate(12, 11) scale(0.85)">
+      <circle cx="10" cy="10" r="9" fill="#d1fae5" />
+      <circle cx="10" cy="10" r="7" stroke="#059669" stroke-width="1.8" fill="none" />
+      <path d="M10 6.5 V10 L12 11" stroke="#059669" stroke-width="1.8" stroke-linecap="round" fill="none" />
+    </g>
+    <text x="40" y="20" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#0f172a">On-Time Pickup</text>
+    <text x="40" y="31" font-family="sans-serif" font-size="8" font-weight="medium" fill="#64748b">Punctual guarantee</text>
+  </g>
+</svg>

@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1e36" />
+      <stop offset="100%" stop-color="#162f4e" />
+    </linearGradient>
+
+    <!-- Card Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+
+    <!-- Gold Accent Gradient -->
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#cfa846" />
+      <stop offset="100%" stop-color="#e8c368" />
+    </linearGradient>
+
+    <!-- Drop Shadow -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="6" flood-color="#020617" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" rx="24" />
+  
+  <!-- Subtle circular mesh pattern in background -->
+  <circle cx="400" cy="100" r="150" fill="none" stroke="#2a6fdb" stroke-width="1" opacity="0.15" />
+  <circle cx="400" cy="100" r="220" fill="none" stroke="#2a6fdb" stroke-width="1" opacity="0.1" />
+
+  <!-- A STYLIZED STEERING WHEEL (Behind driver badge) -->
+  <g transform="translate(140, 175)" opacity="0.15">
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#ffffff" stroke-width="16" />
+    <circle cx="0" cy="0" r="90" fill="none" stroke="#000000" stroke-width="2" />
+    <!-- Spokes -->
+    <path d="M 0 0 L 0 90 M 0 0 L -80 -45 M 0 0 L 80 -45" stroke="#ffffff" stroke-width="14" stroke-linecap="round" />
+    <circle cx="0" cy="0" r="22" fill="#ffffff" />
+    <circle cx="0" cy="0" r="14" fill="#0b1e36" />
+  </g>
+
+  <!-- THE DRIVER ID BADGE CARD (Premium visual element) -->
+  <g transform="translate(240, 50)" filter="url(#cardShadow)">
+    <rect width="210" height="250" fill="url(#cardGrad)" rx="16" stroke="#e2e8f0" stroke-width="1" />
+    
+    <!-- ID Top Bar -->
+    <path d="M 0 16 A 16 16 0 0 1 16 0 H 194 A 16 16 0 0 1 210 16 V 36 H 0 Z" fill="#0b1e36" />
+    <text x="105" y="22" font-family="sans-serif" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="1.5">KMM TRANSPORT</text>
+    <text x="105" y="32" font-family="sans-serif" font-size="5" font-weight="extrabold" fill="#cfa846" text-anchor="middle" letter-spacing="1">DRIVER IDENTIFICATION</text>
+
+    <!-- Clip Hole slot in ID badge -->
+    <rect x="95" y="5" width="20" height="4" fill="#64748b" rx="2" opacity="0.5" />
+
+    <!-- Driver Photo Silhouette Box -->
+    <g transform="translate(65, 55)">
+      <rect width="80" height="90" fill="#e2e8f0" rx="8" stroke="#cbd5e1" stroke-width="1.5" />
+      <!-- Head -->
+      <circle cx="40" cy="35" r="16" fill="#94a3b8" />
+      <!-- Body shoulders -->
+      <path d="M 12 78 C 12 60 25 55 40 55 C 55 55 68 60 68 78 V 90 H 12 Z" fill="#94a3b8" />
+      <!-- Logo decal on shirt -->
+      <circle cx="40" cy="65" r="3" fill="#2a6fdb" />
+      <path d="M 40 62 V 68 M 37 65 H 43" stroke="#ffffff" stroke-width="0.8" />
+    </g>
+
+    <!-- ID Card Info Text -->
+    <text x="105" y="165" font-family="sans-serif" font-size="11.5" font-weight="bold" fill="#0f172a" text-anchor="middle">PROFESSIONAL DRIVER</text>
+    <text x="105" y="177" font-family="sans-serif" font-size="7" font-weight="semibold" fill="#64748b" text-anchor="middle">Phoenix, Arizona Office</text>
+    
+    <!-- Signature Line & Barcode -->
+    <line x1="40" y1="205" x2="170" y2="205" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3" />
+    <text x="105" y="215" font-family="sans-serif" font-size="6" font-style="italic" fill="#94a3b8" text-anchor="middle">Authorized Signature</text>
+
+    <!-- Mini Barcode -->
+    <g transform="translate(60, 227)">
+      <rect x="0" y="0" width="3" height="12" fill="#0f172a" />
+      <rect x="5" y="0" width="1" height="12" fill="#0f172a" />
+      <rect x="8" y="0" width="4" height="12" fill="#0f172a" />
+      <rect x="14" y="0" width="2" height="12" fill="#0f172a" />
+      <rect x="18" y="0" width="1" height="12" fill="#0f172a" />
+      <rect x="21" y="0" width="3" height="12" fill="#0f172a" />
+      <rect x="26" y="0" width="1" height="12" fill="#0f172a" />
+      <rect x="29" y="0" width="4" height="12" fill="#0f172a" />
+      <rect x="35" y="0" width="2" height="12" fill="#0f172a" />
+      <rect x="39" y="0" width="1" height="12" fill="#0f172a" />
+      <rect x="42" y="0" width="3" height="12" fill="#0f172a" />
+      <rect x="47" y="0" width="2" height="12" fill="#0f172a" />
+      <rect x="51" y="0" width="4" height="12" fill="#0f172a" />
+      <rect x="57" y="0" width="1" height="12" fill="#0f172a" />
+      <rect x="60" y="0" width="3" height="12" fill="#0f172a" />
+      <rect x="65" y="0" width="2" height="12" fill="#0f172a" />
+      <rect x="69" y="0" width="4" height="12" fill="#0f172a" />
+      <rect x="75" y="0" width="1" height="12" fill="#0f172a" />
+      <rect x="78" y="0" width="3" height="12" fill="#0f172a" />
+      <rect x="83" y="0" width="2" height="12" fill="#0f172a" />
+      <rect x="87" y="0" width="3" height="12" fill="#0f172a" />
+    </g>
+  </g>
+
+  <!-- RECRUITMENT DETAILS / BENEFIT BADGES ON THE LEFT -->
+  <g transform="translate(40, 55)">
+    <!-- Badge 1: Local Routes -->
+    <g transform="translate(0, 0)">
+      <rect width="160" height="34" fill="#ffffff" fill-opacity="0.08" rx="8" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="18" cy="17" r="9" fill="#2a6fdb" />
+      <!-- Location Icon -->
+      <path d="M 18 11.5 A 3.5 3.5 0 0 1 21.5 15 C 21.5 17.5 18 22.5 18 22.5 C 18 22.5 14.5 17.5 14.5 15 A 3.5 3.5 0 0 1 18 11.5 Z" fill="#ffffff" transform="scale(0.8) translate(4.5, 4.5)" />
+      <text x="36" y="21" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#ffffff">Phoenix Area Routes</text>
+    </g>
+
+    <!-- Badge 2: Flexible Schedule -->
+    <g transform="translate(0, 48)">
+      <rect width="160" height="34" fill="#ffffff" fill-opacity="0.08" rx="8" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="18" cy="17" r="9" fill="#cfa846" />
+      <!-- Calendar Icon -->
+      <rect x="13" y="13" width="10" height="9" rx="1.5" fill="none" stroke="#ffffff" stroke-width="1.5" transform="scale(0.8) translate(4.5, 4.5)" />
+      <line x1="15" y1="11" x2="15" y2="14" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" />
+      <line x1="21" y1="11" x2="21" y2="14" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" />
+      <text x="36" y="21" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#ffffff">Flexible Schedules</text>
+    </g>
+
+    <!-- Badge 3: Meaningful Work -->
+    <g transform="translate(0, 96)">
+      <rect width="160" height="34" fill="#ffffff" fill-opacity="0.08" rx="8" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="18" cy="17" r="9" fill="#10b981" />
+      <!-- Heart Icon -->
+      <path d="M 12 14.5 C 12 14.5 13.5 13 14.8 14.2 C 16 15.4 16 17.4 14.8 18.6 L 12 21.5 L 9.2 18.6 C 8 17.4 8 15.4 9.2 14.2 C 10.5 13 12 14.5 12 14.5 Z" fill="#ffffff" transform="scale(0.8) translate(3, 1)" />
+      <text x="36" y="21" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#ffffff">Help Seniors &amp; Patients</text>
+    </g>
+
+    <!-- Badge 4: Professional Training -->
+    <g transform="translate(0, 144)">
+      <rect width="160" height="34" fill="#ffffff" fill-opacity="0.08" rx="8" stroke="#ffffff" stroke-opacity="0.1" stroke-width="1" />
+      <circle cx="18" cy="17" r="9" fill="#6366f1" />
+      <!-- Cap/Diploma Icon -->
+      <path d="M 18 12 L 23 15.5 L 18 19 L 13 15.5 Z" fill="#ffffff" transform="scale(0.8) translate(4.5, 4.5)" />
+      <path d="M 15 18.5 V 21.5 A 3 3 0 0 0 21 21.5 V 18.5" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" transform="scale(0.8) translate(4.5, 4.5)" />
+      <text x="36" y="21" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#ffffff">Professional Training</text>
+    </g>
+  </g>
+</svg>
