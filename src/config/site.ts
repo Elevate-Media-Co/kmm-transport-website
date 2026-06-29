@@ -3,10 +3,10 @@ export const CONTACT_INFO = {
   shortName: "KMM Transport",
   address: "7912 N. 16th Drive, Phoenix, AZ 85021",
   addressCityStateZip: "Phoenix, AZ 85021",
-  phone: "[Add Phone Number]", // To be replaced by the user later
-  email: "[Add Email Address]", // To be replaced by the user later
-  phoneLink: "tel:[Add Phone Number]", // Clickable when replaced
-  emailLink: "mailto:[Add Email Address]", // Clickable when replaced
+  phone: "+1 (602) 799-6148",
+  email: "info@ketteys.com",
+  phoneLink: "tel:+16027996148",
+  emailLink: "mailto:info@ketteys.com",
   disclaimer: "KMM Transport Services LLC provides non-emergency transportation services only. We do not provide emergency ambulance services or medical treatment during transportation. For medical emergencies, please call 911."
 };
 
